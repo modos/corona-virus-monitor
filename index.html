@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Corona Virus Monitor</title>
+</head>
+<body>
+    <nav>
+        <div class="head">
+            <h1>SBU Covid</h1>
+            <div class="search-box">
+                <input class="search-input" type="text" placeholder="Country Name...">
+                <button class="search-button">Go</button>
+            </div>
+        </div>
+        <fieldset id="group">
+            <input checked type="radio" value="Today Cases" name="group" id="today-cases-radio">
+            <label for="today-cases-radio">Today Cases</label>
+            <input type="radio" value="Today Deaths" name="group" id="today-deaths-radio">
+            <label for="today-deaths-radio">Today Deaths</label>
+            <input type="radio" value="Today Recovered" name="group" id="today-recovered-radio">
+            <label for="today-recovered-radio">Today Recovered</label>
+        </fieldset>
+    </nav>
+
+    <main>
+        <div class="history">
+            <h2>Search History</h2>
+            <div class="history-list"></div>
+            <button class="clear-button">Clear</button>
+        </div>
+        <div class="cases">
+            <h2 class="country-name">Country Name</h2>
+            <div class="cases-body">
+                <div class="today-cases">
+                    <h3>Today Cases</h3>
+                    <p class="today-cases-number">-</p>
+                </div>
+                <div class="critical">
+                    <h3>Critical</h3>
+                    <p class="today-critical-number">-</p>
+                </div>
+                <div class="today-deaths">
+                    <h3>Today Deaths</h3>
+                    <p class="today-deaths-number">-</p>
+                </div>
+                <div class="today-recovered">
+                    <h3>Today Recovered</h3>
+                    <p class="today-recovered-number">-</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>

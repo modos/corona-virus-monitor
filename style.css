@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+nav {
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    background-color: rgb(54, 54, 54);
+    justify-content: space-between;
+    padding: 24px;
+}
+
+fieldset {
+    border: 0px;
+    color: white;
+    margin-right: 24px;
+}
+
+main {
+    background-color: rgb(250, 240, 239);
+    min-height: 95vh;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.head {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.head h1 {
+    color: rgb(208, 168, 167);
+    font-weight: bold;
+}
+
+.head .search-box input {
+    height: 35px;
+    width: 250px;
+    margin-right: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.head .search-box button {
+    height: 35px;
+    width: 50px;
+    background-color: rgb(221, 204, 208);
+    color: rgb(159, 107, 120);
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.history {
+    flex: 30%;
+    text-align: center;
+    padding: 24px;
+}
+
+.cases {
+    flex: 70%;
+    color: black;
+    padding: 24px;
+}
+
+.cases h2 {
+    margin-bottom: 64px;
+}
+
+.cases-body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.cases-body > *{
+    flex: 50%;
+    height: 100px;
+    text-align: center;
+}
+
+.clear-button {
+    height: 35px;
+    width: 50px;
+    background-color: rgb(240, 64, 64);
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 16px;
+}
+
+
+@media only screen and (max-width: 900px) {
+    main {
+      flex-flow: column;
+    }
+
+    nav {
+        flex-flow: column;
+        height: 20vh;
+    }
+  }
+
+@media only screen and (max-width: 500px) {
+    main {
+      flex-flow: column;
+    }
+
+    nav {
+        flex-flow: column;
+        height: 20vh;
+    }
+
+    .head h1 {
+        font-size: 18px;
+    }
+
+    .head .search-box input {
+        width: 150px;
+    }
+  }
+
