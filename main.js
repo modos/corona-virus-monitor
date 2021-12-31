@@ -9,6 +9,8 @@ let userHistory = JSON.parse(localStorage.getItem('user-history'));
 
 if (userHistory === null) {
     clearButton.setAttribute('hidden', true);
+}else {
+    getLocalStorageHistory();
 }
 
 function getItemBody(country, cases, critical, deaths, recovered) {
@@ -84,6 +86,20 @@ async function showTopTodayRecovered() {
     }
 };
 
+function showHistory(query) {
+    const node = document.createElement('p');
+    node.textContent = query;
+    historyList.appendChild(node);
+};
+
+function getLocalStorageHistory() {
+    userHistory.forEach(element => {
+        const node = document.createElement('p');
+        node.textContent = element;
+        historyList.appendChild(node);
+    });
+}
+
 goButton.addEventListener(('click'), async () => {
     let query = searchInput.value;
 
@@ -119,9 +135,7 @@ goButton.addEventListener(('click'), async () => {
     cases.innerHTML = getItemBody(res.country, res.cases,
         res.deaths, res.critical, res.recovered);
 
-    const node = document.createElement('p');
-    node.textContent = query;
-    historyList.appendChild(node);
+        showHistory(query);
 });
 
 clearButton.addEventListener('click', () => {
